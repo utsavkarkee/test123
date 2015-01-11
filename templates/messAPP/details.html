@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>RFID | Student Details</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+ 	<style>
+ 	body{
+ 		font-family: Typica Login;
+ 	}
+
+ 	.header {
+ 		opacity: 0.5;
+ 		padding: 20px;
+ 		padding-left: 50px;
+ 		padding-right: 50px;
+ 		height: 100px;
+ 		background-color: black;
+ 		color: #FFF;
+ 		border-bottom-right-radius:250px;
+ 	}
+
+ 	.midsection {
+ 		opacity: 1;
+ 		font-size: 14px;
+ 		height: 1000px;
+ 		/*background-color: #F3F0FF;
+ 		*/
+ 		color: #FFF;
+ 		padding: 10px;
+ 		background: url(bg.jpg);
+ 		
+ 		margin-left: 100px;
+ 		margin-right: 100px;
+ 	}
+
+ 	.footer {
+ 		opacity: 0.5;
+ 		position: fixed;
+ 		bottom: 0px;
+ 		padding: 20px;
+ 		padding-left: 50px;
+ 		padding-right: 50px;
+ 		height: 100px;
+ 		width:100%;
+ 		background-color: black;
+ 		color: #FFF;
+ 		border-top-left-radius:250px;
+ 	}
+
+ 	#bg {
+ 		height: 650px;
+ 		/*
+ 		background: -webkit-radial-gradient(rgb(178, 229, 229), rgb(110, 110, 200), rgb(5, 5, 66));
+  		background: -o-radial-gradient(rgb(178, 229, 229), rgb(110, 110, 200), rgb(5, 5, 66));
+  		background: -moz-radial-gradient(rgb(178, 229, 229), rgb(110, 110, 200), rgb(5, 5, 66));
+  		background: radial-gradient(rgb(178, 229, 229), rgb(110, 110, 200), rgb(5, 5, 66));
+  		*/
+  		background: url('http://belleviewchristian.com/wp-content/uploads/2014/03/blue-wallpaper-background-texture-checkbox.jpg');
+  		background-size: 100% 100%;
+ 	}
+
+ 	</style>
+ </head>
+
+<body id="bg">
+
+<div class="container-fluid">
+	<div class="row header">
+		<h1><span class="glyphicon glyphicon-leaf" style="margin-right: 20px;"></span>CG-RFID PORTAL<h1>
+	</div>
+
+	<div class="row midsection">
+		<h4><b><u>Student Details:</u></b></h4>
+		<br>
+		<div style="font-size:200px; margin-left:auto; margin-right:auto; width: 200px; opacity: 0.5; margin-bottom: 10px">
+			<span class="glyphicon glyphicon-user"></span>
+		</div>
+		<div style="margin-right: 0px; margin-top:0px; color: white">
+			<span class="glyphicon glyphicon-arrow-left"></span>
+			<a href="{% url 'form' %}">Go Back</a>
+		</div>
+		<br>
+		<table class="table table-bordered">
+			<tr>
+				<td style="width:25%"><b>Full Name:</b></td>
+				<td>{{result.name}}</td>
+			</tr>
+			<tr>
+				<td style="width:25%"><b>Registration No.:</b></td>
+				<td>{{result.registration_number}}</td>
+			</tr>
+			<tr>
+				<td style="width:25%"><b>Roll No.:</b></td>
+				<td>{{result.roll_number}}</td>
+			</tr>
+			<tr>
+				<td style="width:25%"><b>Branch:</b></td>
+				<td>{{result.branch}}</td>
+			</tr>
+			<tr>
+				<td style="width:25%"><b>Hostel:</b></td>
+				<td>{{result.hostel}}</td>
+			</tr>
+			<tr>
+				<td style="width:25%"><b>Mess (Name):</b></td>
+				<td>{{result.mess}}</td>
+			</tr>
+			<tr>
+				<td style="width:25%"><b>Mess Attendance:</b></td>
+				<td>{{result.mess_attendence}} days</td>
+			</tr>
+		</table>
+	</div>
+
+	<div style="text-align:center" class="row footer">
+		<h4 >Copyright CG-RFID 2015</h4>
+	</div>
+  
+</div>
+
+</body>
+
+</html>
+
+
